@@ -47,7 +47,9 @@ var getPlace = function () {
         } else {
             document.getElementById("progress").style = 'width: ' + (retorno.bad/retorno.cs)*100 + '%';
             document.getElementById("progress").style += 'progress-bar-danger';
-        },
+        }
+
+      },
       error: function(model, error) {
         $(".error").show();
       }

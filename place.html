@@ -23,6 +23,7 @@
         <img class="center-block" src="assets/img/queue120.png">
 
         <div class="container">
+            <div id="teste"></div>
             <div class="row show">
                 <div class="col-md-4 col-xs-4"><img src="{{img url}}" alt="pageImage" class="img-rounded img-responsive"></div>
                 <div class="col-md-8 col-xs-8 botao"><h4>{{place name}}</h4></div>
@@ -48,5 +49,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Facebook -->
+        <script src="http://connect.facebook.net/en_US/sdk.js"></script>
+        <script src="assets/js/check-facebook-login.js"></script>
+
+        <!-- Searcher -->
+        <script src="assets/js/getPlace.js"></script>
+        <script>
+            window.fbAsyncInit = function () {
+                checkFacebookLogin(getPlace);
+            };
+        </script>
     </body>
 </html>

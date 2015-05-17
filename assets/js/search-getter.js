@@ -12,12 +12,10 @@ var searchGetter = function() {
 
                 for (var i = 0; i < ourdata.length; i++) {
                     copied = temp.cloneNode(true);
-                    copied.childNodes[1].   innerHTML = ourdata[i].name;
-                    if (ourdata.picture) {
-                        copied.childNodes[0].childNodes[0].src = ourdata[i].picture.data.url;
-                    } else {
-                        copied.childNodes[0].remove();
-                    }
+                    copied.childNodes[1].innerHTML = ourdata[i].name;
+                    
+                    copied.childNodes[0].childNodes[0].innerHTML = '<div class="col-md-4 col-xs-6"><img id="image" src="ourdata[i].picture.data.url"></div>'
+                    
                     wrap.appendChild(copied);
                 }
             }

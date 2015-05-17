@@ -3,6 +3,7 @@ var searchGetter = function() {
     FB.api(
         "/search? fields=id,name,picture{url},location{street,city}& q =" + query +"&type = place& type=page",
         function (response){
+            teste = response;
             if (response && !response.error) {
                 var ourdata = response.data;
                 output = document.getElementById("tester");

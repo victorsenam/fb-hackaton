@@ -40,13 +40,13 @@ var getPlace = function () {
         // colocar as bagacinha no html
         if (retorno.good > retorno.med && retorno.good > retorno.bad) {
             document.getElementById("progress").attributes['style'].value = 'width: ' + (retorno.good/retorno.cs)*100 + '%';
-            document.getElementById("progress").class += 'progress-bar-success'; // pode ser warning error ou success
+            document.getElementById("progress").attributes['class'] += 'progress-bar-success'; // pode ser warning error ou success
         } else if (retorno.med > retorno.good && retorno.med > retorno.bad) {
             document.getElementById("progress").attributes['style'].value = 'width: ' + (retorno.med/retorno.cs)*100 + '%';
-            document.getElementById("progress").class += 'progress-bar-warning'; // pode ser warning error ou success      
+            document.getElementById("progress").attributes['class'] += 'progress-bar-warning'; // pode ser warning error ou success      
         } else {
             document.getElementById("progress").attributes['style'].value = 'width: ' + (retorno.bad/retorno.cs)*100 + '%';
-            document.getElementById("progress").class += 'progress-bar-danger';
+            document.getElementById("progress").attributes['class'] += 'progress-bar-danger';
         }
 
       },

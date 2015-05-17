@@ -6,7 +6,7 @@ var searchGetter = function() {
         {access_token: FB.getAccessToken()},
         function (response) {
             if (response && !response.error) {
-                var ourdata = response.data;
+                ourdata = response.data;
                 var wrap = document.getElementById("outwrap");
                 var temp = document.getElementById("template");
 

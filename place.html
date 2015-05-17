@@ -24,18 +24,18 @@
 
         <div class="container">
             <div class="row show">
-                <div class="col-md-4 col-xs-4"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p50x50/10462444_10154254792040548_5556635957554086513_n.jpg?oh=1c483c761b22c3132768485a41855e47&oe=56039140&__gda__=1439155657_53fabb72d59ceb14025a3ee14d31a44c" alt="pageImage" class="img-rounded img-responsive"></div>
-                <div class="col-md-8 col-xs-8 botao">Cinemark Eldorado</div>
+                <div class="col-md-4 col-xs-4"><img src="{{img url}}" alt="pageImage" class="img-rounded img-responsive"></div>
+                <div class="col-md-8 col-xs-8 botao"><h4>{{place name}}</h4></div>
             </div>
             <div class="row text-center show">
                 <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="{{crowd}}" aria-valuemin="0" aria-valuemax="100" style="width: 66%"></div>
+                    <div class="progress-bar progress-bar-{{color}} progress-bar-striped" role="progressbar" aria-valuenow="{{crowd}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%"></div>
                 </div>
             </div>
             <div class="row text-center show">
                 <div class="col-md-4 col-xs-6">
                     <span class="glyphicon glyphicon-user botao" aria-hidden="true"></span>
-                    x1234
+                    x{{users}}
                 </div>
                 <div class="col-md-8 col-xs-6">
                     <button type="button" class="btn btn-primary">Contribute</button>

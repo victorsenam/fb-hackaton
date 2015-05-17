@@ -10,11 +10,11 @@ var searchGetter = function() {
                 var wrap = document.getElementById("outwrap");
                 var temp = document.getElementById("template");
 
-                var copy = temp.cloneNode();
                 for (var i = 0; i < ourdata.length; i++) {
-                    copy.getElementById("image").src = ourdata.picture.data.url;                    
-                    copy.getElementById("name").innerHTML = ourdata.name;
-                    wrap.appendChild(copy);
+                    copied = temp.cloneNode(true);
+                    copied.getElementById("image").src = ourdata.picture.data.url;                    
+                    copied.getElementById("name").innerHTML = ourdata.name;
+                    wrap.appendChild(copied);
                 }
             }
         }

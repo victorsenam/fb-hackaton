@@ -1,4 +1,4 @@
-window.facebookAsyncCalls.push(function() {
+var facebookLogin = function() {
     FB.init({
         appId      : '1436265956676047',
         channelUrl : 'http://queue-fb-hackathon.herokuapp.com',

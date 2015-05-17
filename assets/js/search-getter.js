@@ -11,11 +11,9 @@ var searchGetter = function() {
                 var temp = document.getElementById("template");
 
                 for (var i = 0; i < ourdata.length; i++) {
-                    copied = temp.cloneNode(true);
-                    copied.childNodes[1].innerHTML = ourdata[i].name;
-                    
-                    copied.childNodes[0].childNodes[0].innerHTML = '<div class="col-md-4 col-xs-6"><img id="image" src="ourdata[i].picture.data.url"></div>'
-                    
+                    copied = temp.cloneNode(true);                    
+                    copied.childNodes[0].innerHTML = '<div class="col-md-4 col-xs-6"><img id="image" src="ourdata[i].picture.data.url"></div>';
+                    copied.childNodes[1].innerHTML = '<div class="col-md-8 col-xs-6" id="ourdata[i].name"></div>';
                     wrap.appendChild(copied);
                 }
             }

@@ -1,7 +1,7 @@
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '1436265956676047',
-        channelUrl : '//http://queue-fb-hackathon.herokuapp.com',
+        channelUrl : 'http://queue-fb-hackathon.herokuapp.com',
         xfbml      : true,
         version    : 'v2.3'
     });

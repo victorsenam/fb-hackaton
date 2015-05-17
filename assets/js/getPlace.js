@@ -68,8 +68,8 @@ var getPlace = function () {
             ourdata = response;
             if (response && !response.error) {
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                if (ourdata.cover) {
-                    document.getElementById("imagem").attributes['src'].value = ourdata.cover.source;
+                if (ourdata.picture) {
+                    document.getElementById("imagem").attributes['src'].value = ourdata.picture.data.url;
                 } else {
                     document.getElementById("imagem").remove();
                 }

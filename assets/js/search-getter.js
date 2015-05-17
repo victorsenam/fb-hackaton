@@ -3,6 +3,7 @@ var searchGetter = function() {
     requestFB = "search?fields=id,name,picture{url},location{street,city}&q=" + query +"&type=place";
     FB.api(
         requestFB,
+        {access_token: FB.getAuthResponse().accessToken},
         function (response){
             teste = response;
             if (response && !response.error) {

@@ -39,14 +39,14 @@ var getPlace = function () {
 
         // colocar as bagacinha no html
         if (retorno.good > retorno.med && retorno.good > retorno.bad) {
-            document.getElementById("progress").style = "width: " + (retorno.good/retorno.cs)*100 + "%";
-            document.getElementById("progress").class += "progress-bar-success"; // pode ser warning error ou success
+            document.getElementById("progress").style = 'width: ' + (retorno.good/retorno.cs)*100 + '%';
+            document.getElementById("progress").class += 'progress-bar-success'; // pode ser warning error ou success
         } else if (retorno.med > retorno.good && retorno.med > retorno.bad) {
-            document.getElementById("progress").style = "width: " + (retorno.med/retorno.cs)*100 + "%";
-            document.getElementById("progress").class += "progress-bar-warning"; // pode ser warning error ou success      
+            document.getElementById("progress").style = 'width: ' + (retorno.med/retorno.cs)*100 + '%';
+            document.getElementById("progress").class += 'progress-bar-warning'; // pode ser warning error ou success      
         } else {
-            document.getElementById("progress").style = "width: " + (retorno.bad/retorno.cs)*100 + "%";
-            document.getElementById("progress").style = "progress-bar-danger";
+            document.getElementById("progress").style = 'width: ' + (retorno.bad/retorno.cs)*100 + '%';
+            document.getElementById("progress").style += 'progress-bar-danger';
         },
       error: function(model, error) {
         $(".error").show();

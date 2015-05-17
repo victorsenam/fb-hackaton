@@ -10,30 +10,26 @@ module.exports = function (grunt) {
     // Project Configuration
     var configs = {
         pkg: grunt.file.readJSON('package.json'),
-        options: {
-            wrapped: false
-        },
-
         // grunt contrib handlebars
-        handlebars: {
+        'compile-handlebars': {
             all: {
-                filenames: ['home','list','page','vote','list']
-            },
+                files: [
+                    {
+                        src: 'source/home.hbs', 
+                        dest: 'built/home.html'
+                    }
+                ]
+            }
         }
     };
 
-    // handlebars
-    configs.handlebars.all.files = {};
-    for (var i = 0; i < configs.handlebars.all.filenames.length; i++) {
-        configs.handlebars.all.files[vars.destPath + configs.handlebars.all.filenames[i] + vars.destExt] = vars.sourcePath + configs.handlebars.all.filenames[i] + vars.sourceExt;
-    }
 
     // load configs
     grunt.initConfig(configs);
 
     // Load NPM tasks
-    grunt.loadNpmTasks('grunt-contrib-handlebars');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
 
     // Register tasks
-    grunt.registerTask('default', ['handlebars']);
+    grunt.registerTask('default', ['compile-handlebars']);
 };

@@ -1,4 +1,4 @@
-var checkFacebookLogin = function() {
+var checkFacebookLogin = function(callback = null) {
     FB.init({
         appId      : '1436265956676047',
         channelUrl : 'http://queue-fb-hackathon.herokuapp.com',
@@ -10,6 +10,7 @@ var checkFacebookLogin = function() {
         if (response.status === 'connected') {
             console.log('Logged in.');
  //           authres = FB.getAuthResponse();
+            if (callback != null) callback();
         } else {
             window.location.href = 'login.html';
         }

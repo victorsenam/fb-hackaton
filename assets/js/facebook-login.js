@@ -9,7 +9,7 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log('Logged in.');
-            window.location.href = 'search.html';
+            window.location.href = 'home.html';
         }
         else {
             FB.login();

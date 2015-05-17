@@ -68,7 +68,11 @@ var getPlace = function () {
             ourdata = response;
             if (response && !response.error) {
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                document.getElementById("imagem").attributes['src'].value = ourdata.picture.url;
+                if (ourdata.cover) {
+                    document.getElementById("imagem").attributes['src'].value = ourdata.cover.source;
+                } else {
+                    document.getElementById("imagem").remove();
+                }
             } else {
                 document.getElementById("place-name").innerHTML = "Error! :( Please try again";
             }

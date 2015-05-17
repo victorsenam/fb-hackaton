@@ -9,6 +9,7 @@ var checkFacebookLogin = function() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log('Logged in.');
+            authres = FB.getAuthResponse();
         } else {
             window.location.href = 'login.html';
         }

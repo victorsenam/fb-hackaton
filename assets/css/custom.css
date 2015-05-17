@@ -16,6 +16,10 @@ body {
   margin: 0 auto;
 }
 
+.botao {
+  margin-top:10px; 
+}
+
 .form-search .form-search-heading,
 .form-search .checkbox {
   margin-bottom: 10px;

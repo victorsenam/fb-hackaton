@@ -58,6 +58,14 @@ var getPlace = function () {
 
     // Agora a mesma coisa só q com o grafo do face
     var requestFB = "idpage? fields=name,picture{url}";
-    
-    
+    FB.api(
+        requestFB,
+        {access_token: FB.getAccessToken()},
+        function(response) {
+            if (response && !response.error) {
+                ourdata = response.data;
+                document.getElementById("place-name").innerHTML = ourdata.name;
+            }
+        }
+    );
 };

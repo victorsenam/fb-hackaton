@@ -50,7 +50,7 @@ var getPlace = function () {
 
 
     // Agora a mesma coisa só q com o grafo do face
-    var requestFB = "";
+    var requestFB = "idpage? fields=name,picture{url}";
     
     
 };

@@ -68,7 +68,7 @@ var getPlace = function () {
             ourdata = response;
             if (response && !response.error) {
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                document.getElementById("imagem").src = ourdata.picture.url;
+                document.getElementById("imagem").attributes['src'].value = ourdata.picture.url;
             } else {
                 document.getElementById("place-name").innerHTML = "Error! :( Please try again";
             }

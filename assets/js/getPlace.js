@@ -56,12 +56,11 @@ var getPlace = function () {
       }
     });
 
-//    json = All.equalTo("id_page", idpage).toJSON();  
+ //   json = All.equalTo("id_page", idpage).toJSON();  
 
 
     // Agora a mesma coisa só q com o grafo do face
-    /*
-    var requestFB = "idpage? fields=name,picture{url}";
+    var requestFB = idpage+"? fields=name,picture{url}";
     FB.api(
         requestFB,
         {access_token: FB.getAccessToken()},
@@ -69,11 +68,10 @@ var getPlace = function () {
             if (response && !response.error) {
                 ourdata = response.data;
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                document.getElementByIdd("imagem").src = ourdata.picture.url;
+                document.getElementById("imagem").src = ourdata.picture.url;
             } else {
                 document.getElementById("place-name").innerHTML = "Erro!";
             }
         }
     );
-    */
 };

@@ -66,7 +66,7 @@ var getPlace = function () {
         {access_token: FB.getAccessToken()},
         function(response) {
             if (response && !response.error) {
-                ourdata = response.data;
+                ourdata = response;
                 document.getElementById("place-name").innerHTML = ourdata.name;
                 document.getElementById("imagem").src = ourdata.picture.url;
             } else {

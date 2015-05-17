@@ -12,8 +12,8 @@ var searchGetter = function() {
 
                 for (var i = 0; i < ourdata.length; i++) {
                     copied = temp.cloneNode(true);                    
-                    copied.childNodes[0].innerHTML = '<div class="col-md-4 col-xs-6"><img id="image" src="ourdata[i].picture.data.url"></div>';
-                    copied.childNodes[1].innerHTML = '<div class="col-md-8 col-xs-6" id="ourdata[i].name"></div>';
+                    copied.innerHTML = '<div class="col-md-4 col-xs-6"><img id="image" src="ourdata[i].picture.data.url"></div>'+
+                                       '<div class="col-md-8 col-xs-6" id="ourdata[i].name"></div>';
                     wrap.appendChild(copied);
                 }
             }

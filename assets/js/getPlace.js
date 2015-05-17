@@ -60,17 +60,21 @@ var getPlace = function () {
 
 
     // Agora a mesma coisa só q com o grafo do face
-    var requestFB = idpage+"? fields=name,picture{url}";
+    var requestFB = idpage+"?fields=name,cover";
     FB.api(
         requestFB,
         {access_token: FB.getAccessToken()},
         function(response) {
+            ourdata = response;
             if (response && !response.error) {
-                ourdata = response.data;
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                document.getElementById("imagem").src = ourdata.picture.url;
+                if (ourdata.cover) {
+                    document.getElementById("imagem").attributes['src'].value = ourdata.cover.source;
+                } else {
+                    document.getElementById("imagem").remove();
+                }
             } else {
-                document.getElementById("place-name").innerHTML = "Erro!";
+                document.getElementById("place-name").innerHTML = "Error! :( Please try again";
             }
         }
     );

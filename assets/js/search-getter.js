@@ -12,8 +12,12 @@ var searchGetter = function() {
 
                 for (var i = 0; i < ourdata.length; i++) {
                     copied = temp.cloneNode(true);
-                    copied.childNodes[0].childNodes[0].src = ourdata.picture.data.url;                    
                     copied.childNodes[1].innerHTML = ourdata.name;
+                    if (ourdata.picture) {
+                        copied.childNodes[0].childNodes[0].src = ourdata.picture.data.url;
+                    } else {
+                        copied.childNodes[0].remove();
+                    }
                     wrap.appendChild(copied);
                 }
             }

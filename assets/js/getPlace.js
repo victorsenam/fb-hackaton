@@ -60,7 +60,7 @@ var getPlace = function () {
 
 
     // Agora a mesma coisa só q com o grafo do face
-    var requestFB = idpage+"?fields=name,picture{url}";
+    var requestFB = idpage+"?fields=name,cover";
     FB.api(
         requestFB,
         {access_token: FB.getAccessToken()},
@@ -68,8 +68,8 @@ var getPlace = function () {
             ourdata = response;
             if (response && !response.error) {
                 document.getElementById("place-name").innerHTML = ourdata.name;
-                if (ourdata.picture) {
-                    document.getElementById("imagem").attributes['src'].value = ourdata.picture.data.url;
+                if (ourdata.cover) {
+                    document.getElementById("imagem").attributes['src'].value = ourdata.cover.source;
                 } else {
                     document.getElementById("imagem").remove();
                 }

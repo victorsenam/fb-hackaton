@@ -12,7 +12,7 @@ var searchGetter = function() {
 
                 for (var i = 0; i < ourdata.length; i++) {
                     copied = temp.cloneNode(true);                    
-                    copied.innerHTML = '<div class="col-md-4 col-xs-4 botao"><img href="place.html?place_id='+ourdata[i].id+'" id="image" class="img-rounded" src="'+ourdata[i].picture.data.url+'"></div>'+
+                    copied.innerHTML = '<div class="col-md-4 col-xs-4 botao"><a href="place.html?place_id='+ourdata[i].id+'"><img id="image" class="img-rounded" src="'+ourdata[i].picture.data.url+'"></a></div>'+
                                        '<div class="col-md-8 col-xs-8 botao" id="text">'+ourdata[i].name+'</div>';
                     wrap.appendChild(copied);
                 }

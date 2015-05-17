@@ -54,4 +54,10 @@ var getPlace = function () {
     });
 
 //    json = All.equalTo("id_page", idpage).toJSON();  
+
+
+    // Agora a mesma coisa só q com o grafo do face
+    var requestFB = "idpage? fields=name,picture{url}";
+    
+    
 };

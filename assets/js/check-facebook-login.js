@@ -1,4 +1,4 @@
-window.fbAsyncInit = function() {
+window.facebookAsyncCalls.push(function() {
     FB.init({
         appId      : '1436265956676047',
         channelUrl : 'http://queue-fb-hackathon.herokuapp.com',
@@ -13,4 +13,4 @@ window.fbAsyncInit = function() {
             window.location.href = 'login.html';
         }
     });
-};
+});

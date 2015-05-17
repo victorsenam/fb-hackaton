@@ -6,7 +6,7 @@ var getPlace = function () {
     var Request = Parse.Object.extend("Request");
     var req = new Request();
      
-    var idpage = parseInt(window.location.href.split("local_id=")[1].split("&")[0]);
+    var idpage = parseInt(window.location.href.split("place_id=")[1].split("&")[0]);
     var retorno;
 
     All.equalTo("id_page", idpage).find({
@@ -38,8 +38,8 @@ var getPlace = function () {
         }
 
         // colocar as bagacinha no html
-        document.getElementById("progress").style = "width: " + (good/cs)*100 + "%";
-        document.getElementById("progress").class += "progress-bar-green";
+        //    document.getElementById("progress").style = "width: " + (retorno.good/retorno.cs)*100 + "%";
+        //    document.getElementById("progress").class += "progress-bar-success"; // pode ser warning error ou success
       },
       error: function(model, error) {
         $(".error").show();

@@ -25,12 +25,12 @@
         <div class="container">
             <div id="teste"></div>
             <div class="row show">
-                <div class="col-md-4 col-xs-4"><img src="{{img url}}" alt="pageImage" class="img-rounded img-responsive"></div>
-                <div class="col-md-8 col-xs-8 botao"><h4>{{place name}}</h4></div>
+                <div class="col-md-4 col-xs-4"><img src="" id="imagem" alt="pageImage" class="img-rounded img-responsive"></div>
+                <div class="col-md-8 col-xs-8 botao"><h4 id="place-name"></h4></div>
             </div>
             <div class="row text-center show">
                 <div class="progress">
-                    <div class="progress-bar progress-bar-{{color}} progress-bar-striped" role="progressbar" aria-valuenow="{{crowd}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%"></div>
+                    <div id="progress" class="progress-bar progress-bar-{{color}} progress-bar-striped" role="progressbar" aria-valuenow="{{crowd}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%"></div>
                 </div>
             </div>
             <div class="row text-center show">

@@ -48,6 +48,7 @@ var getPlace = function () {
             document.getElementById("progress").attributes['style'].value = 'width: ' + (retorno.bad/retorno.cs)*100 + '%';
             document.getElementById("progress").attributes['class'].value += ' progress-bar-danger';
         }
+        document.getElementById("usr_count").innerHTML = retorno.cs;
 
       },
       error: function(model, error) {

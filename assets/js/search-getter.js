@@ -1,1 +1,1 @@
-document.write(window.location.href.split('query=')[0]);
+document.write(window.location.href.split('query=')[1].split("&")[0]);

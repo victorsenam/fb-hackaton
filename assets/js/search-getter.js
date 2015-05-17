@@ -5,7 +5,7 @@ var searchGetter = function() {
         function (response){
             if (response && !response.error) {
                 var ourdata = response.data;
-                var output = document.getElementById("tester");
+                output = document.getElementById("tester");
                 for (var i = 0; i < ourdata.length; i++) {
                     output.innerHTML += ourdata[i].name + "<br>";
                 }

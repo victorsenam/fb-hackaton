@@ -70,7 +70,7 @@ var getPlace = function () {
                 document.getElementById("place-name").innerHTML = ourdata.name;
                 document.getElementById("imagem").src = ourdata.picture.url;
             } else {
-                document.getElementById("place-name").innerHTML = "Erro!";
+                document.getElementById("place-name").innerHTML = "Error! :( Please try again";
             }
         }
     );

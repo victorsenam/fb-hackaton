@@ -1,6 +1,8 @@
 var searchGetter = function() {
     var query = window.location.href.split('query=')[1].split("&")[0];
     requestFB = "search?fields=id,name,picture{url},location{street,city}&q=" + query +"&type=place";
+    console.log(FB.getAuthResponse());
+    console.log(FB.getAuthResponse().accessToken);
     FB.api(
         requestFB,
         {access_token: FB.getAuthResponse().accessToken},

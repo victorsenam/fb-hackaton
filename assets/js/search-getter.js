@@ -12,8 +12,8 @@ var searchGetter = function() {
 
                 for (var i = 0; i < ourdata.length; i++) {
                     copied = temp.cloneNode(true);
-                    copied.childNode[0].childNode[0].src = ourdata.picture.data.url;                    
-                    copied.childNode[1].innerHTML = ourdata.name;
+                    copied.childNodes[0].childNodes[0].src = ourdata.picture.data.url;                    
+                    copied.childNodes[1].innerHTML = ourdata.name;
                     wrap.appendChild(copied);
                 }
             }
